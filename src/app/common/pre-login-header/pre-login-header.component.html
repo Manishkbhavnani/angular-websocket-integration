@@ -1,0 +1,89 @@
+<header class="header rs-nav header-transparent dashboard-header">
+    <div class="sticky-header navbar-expand-lg bg-transparent" id="sticky-header">
+        <div class="menu-bar clearfix" style="padding-top: 3px;border: none !important;" >
+            <div class="container clearfix">
+                <!-- Header Logo ==== -->
+                <div class=" logo-size menu-logo logo-change  jm-logo">
+                    <a [routerLink]="['/']" routerLinkActive="router-link-active">
+                        <img  id="my_image" class="logo1" >
+                        <img src="assets/images/logo.png" class="logo2" alt="" srcset="">
+                    </a>
+                </div>
+                <!-- Mobile Nav Button ==== -->
+
+
+
+
+                <button class="navbar-toggler collapsed menuicon justify-content-end" type="button"
+                    data-toggle="collapse" data-target="#menuDropdown" aria-controls="menuDropdown"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+                <!-- Navigation Menu ==== -->
+                <div *ngIf="!isLogin" class="menu-links  collapse justify-content-end" id="menuDropdown" style="margin-top: 0px !important;margin-bottom: -14px;">
+                    <div class="menu-logo">
+                        <a [routerLink]="['/']">
+                            <img src="assets/images/logo.png" class="logo1" alt=""
+                                srcset="assets/images/logo@2x.png 2x, assets/images/logo@3x.png 3x">
+                            <!-- <img src="assets/images/logo.png" class="logo2" alt="" srcset=""> -->
+                        </a>
+                    </div>
+                    <ul class="nav navbar-nav ">
+                        <li><a [routerLink]="['/auth']">Login </a></li>
+                        <li class="custom-li"><a>|</a></li>
+                    </ul>
+                    <div class="secondary-menu ">
+                        <div class="secondary-inner">
+                            <ul>
+                                <li class="rectangle-button-custom  text-center effectBtnHov"
+                                    [routerLink]="['/signup/sign-up-user']">
+                                    <a class="text-white mobile-view-1" [routerLink]="['/signup/sign-up-user']"
+                                        style="margin-top: -6px;">Signup</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div *ngIf="isLogin" class="menu-links  collapse justify-content-end" id="menuDropdown" style="margin-top: 19px !important;">
+                    <div class="menu-logo">
+                        <a [routerLink]="['/']">
+                            <img src="assets/images/logo.png"  class="logo1" alt=""
+                                srcset="assets/images/logo@2x.png 2x, assets/images/logo@3x.png 3x">
+                            <!-- <img src="assets/images/logo.png" class="logo2" alt="" srcset=""> -->
+                        </a>
+                    </div>
+                    <ul class="nav navbar-nav ">
+
+                        <li><a [routerLink]="[loginUserRoleDashboared]">Dashboard</a></li>
+
+                        <li class="custom-li"><a>|</a></li>
+                        <li>
+                            <a [routerLink]="['/sign-up-user']">Sign up </a>
+
+                        </li>
+
+
+
+
+                        <li class="custom-li"><a>|</a></li>
+                        <li><a (click)="logoutUser()">Logout </a>
+                        </li>
+
+                    </ul>
+
+
+                </div>
+
+                <!-- Navigation Menu END ==== -->
+            </div>
+        </div>
+    </div>
+</header>
+<app-digi-crop-loader *ngIf="loader"> </app-digi-crop-loader>
+

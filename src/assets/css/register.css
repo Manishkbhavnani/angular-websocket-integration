@@ -1,0 +1,45 @@
+
+.register-heading {
+    font-family: Ubuntu;
+    font-size: 49.5px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.47;
+    letter-spacing: 1.98px;
+    text-align: left;
+    color: #000000;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .bg-register {
+        background-image: none;
+    }
+}
+
+
+/* Portrait tablets and small desktops */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .bg-register {
+        background-image: none;
+    }
+}
+
+
+/* Landscape phones and portrait tablets */
+
+@media (max-width: 767px) {
+    .bg-register {
+        background-image: none;
+    }
+}
+
+
+/* Portrait phones and smaller */
+
+@media (max-width: 480px) {
+    .bg-register {
+        background-image: none;
+    }
+}

@@ -1,0 +1,138 @@
+<div class="main-content">
+  
+    <div class="row mt-5 justify-content-center mr-4" *ngIf="this.participantsEmpty === true">
+        <img src="assets/images/no-chat.png" style="width: 200px;" />
+       
+    </div>
+    <div class="row mt-3 justify-content-center  mb-5"  *ngIf="this.participantsEmpty === true">
+        <span class="text-2-new " style="font-size: 36px !important; text-align: center;">No Chats Available </span>
+    </div>
+    <div class="container" *ngIf="this.participantsEmpty === false" >
+        <div class="row mx-0" >
+           <div class="col-lg-3 col-md-12  border-secondary px-0" id="listPanel">
+                    <div class="card mt-5 m-b30 " 
+                    style=" border-radius: 10px 10px 10px 10px; box-shadow: 0px 2px 4px 0px rgba(54, 54, 54, 0.4); background-color: #ffffff; ">
+                    <div class="row pr-4 pl-4 pt-1 justify-content-center   " style="font-size: 17px;margin: 0px;"> Conversations</div>
+                    <div class="row">
+                    
+                    </div>
+                    <div class="chat-name overflow-y-scroll my-125rem" id="scroll-tracker"  >
+                        <div 
+                            class=" d-flex p-125rem card-custom "   *ngFor="let item of participants;let i = index" style="cursor: pointer;" [class.bgCard]="selectedIndex === i">
+                            <div class="row"  (click)="getChat(item?._id,participants,i)">
+                                <div class="col-4">
+                                <img src="assets/images/no-profile.png" 
+                                    class="personimg job-details-img" />
+                                </div>
+                                
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <span class="m-0  line-h-3.5" style="font-size: 19px;">{{item?.firstName}}
+                                                {{item?.lastName}}
+                                        
+                                                <span class="notification" *ngIf="item?.total !== 0" > {{item?.total}} </span>
+                                            </span>
+                                        </div>
+                                        <div class="row mt-1">
+                                            <span class="col-7 text-control-1-line " style="font-size: 12px;opacity: .6;padding: 0px;line-height: 2;">{{item?.message?.message}}
+                                             &nbsp;&nbsp;&nbsp; 
+                                            </span>
+                                            <span class="col-5 text-center" style="font-size: 10px;opacity: .6;padding: 0px;line-height: 2.5;">{{item?.message?.sendAt  | date:'shortTime'}}</span>
+                                        </div>
+                                    </div>
+                                   
+                                    
+                                </div>
+                            
+                            </div>
+
+                    </div>
+                </div>
+           
+        </div>
+               
+               
+    
+                
+                <div class="col-lg-8 d-none d-lg-block p-0" id="chatPanel" style="margin-left: 19px;">
+                    <div class="card mt-5 m-b30 " 
+                    style=" border-radius: 10px 10px 10px 10px; box-shadow: 0px 2px 4px 0px rgba(54, 54, 54, 0.4); background-color: #ffffff; ">
+        
+                    <div class="row" style="padding: 0px 0px 0px 12px;">
+                        <div class="col-lg-12 col-md-12 col-12 d-flex   " style="padding: 8px 0px 0px 11px;">
+                          <button id="backIcon" (click)="onBack()" class="d-none m-hide-icon"> <i class=" fa fa-arrow-left fa-2x float-left " ></i></button> 
+                            <div class="">
+                                <img src="assets/images/no-profile.png"
+                                    *ngIf="currentPicUserId === null || currentProfilePic===null"
+                                    class="personimg job-details-img" />
+
+                            </div>
+                            <div class="flex-grow-1 text-left pl-4">
+                            <p class="m-0 "  style="line-height: 1.5;font-size: 21px;font-weight: 500;">{{username}}</p>
+
+                                <span><i *ngIf="isTyping " class="isTyping">typing...</i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-bord overflow-y-scroll m-125rem ${implements OnChanges}"
+                        style=" height: xyz;" #scrollMe id="msgContainer"  >
+                        <div *ngFor="let chat of allChats ; let i = index;">
+                            <div class="container-new pt-4 mb-3"
+                                *ngIf='checkDate(chat.sendAt,allChats[i-1]) === "true"'>
+                                <div class="line-1">
+                                    <mat-divider></mat-divider>
+                                </div>
+                                <div class="text-1 mat-typography">{{chat.sendAt  | date:'mediumDate'}}</div>
+                                <div class="line-1">
+                                    <mat-divider></mat-divider>
+                                </div>
+                            </div>
+                            <div class="container-new pt-4 mb-3"
+                                *ngIf='checkDate(chat.sendAt,allChats[i-1]) === "Today"'>
+                                <div class="line-1">
+                                    <mat-divider></mat-divider>
+                                </div>
+                                <div class="text-1 mat-typography">Today</div>
+                                <div class="line-1">
+                                    <mat-divider></mat-divider>
+                                </div>
+                            </div>
+                         
+                            <div class="w-75 mt-3  text-justify   float-left"
+                                *ngIf="chat.user === this.receiverId ">
+                                <div class="p-3 px-3  bg-light-gray  " style="border-radius: 15px 15px 15px 0px;">{{chat.message}}</div>
+                                <p class="text-muted m-0 text-small float-left">{{chat.sendAt  | date:'shortTime'}} </p>
+                            </div>
+
+
+                            <div class="w-75  mt-3 text-justify  float-right"
+                                *ngIf="chat.user != this.receiverId ">
+                                <div class="p-3 px-3  bg-light-gray  " style="border-radius: 15px 15px 0px 15px;">{{chat.message}}
+                                    <span *ngIf="chat.view === true" class="float-right">seen</span> <span
+                                    class="float-right" *ngIf="chat.view != true">delivered</span> 
+                                </div>
+                                <p class="text-muted m-0 text-small float-right">{{chat.sendAt  |  date:'shortTime' }} &nbsp;&nbsp;
+                                   </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0 message-box border-top" style="border-radius: 10px;" type="flex" justify="space-between">
+                        <div class="flex-grow-1">
+                            <input type="text" class="form-control border-0 bg-transparent my-auto"
+                                placeholder="Type your message here" (keyup.enter)="sendMessage()"
+                                 [(ngModel)]="message" name="message" (keyup) ="typing()"></div>
+                        <button class="d-flex send-msg-icon text-white float-right" id="send" (click)="sendMessage()"><i
+                                class="fa fa-paper-plane fa-1x m-auto" style="color: #4264fb;"></i></button>
+                    </div>
+             
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+    
+    <app-login-footer>
+
+    </app-login-footer>
+</div>

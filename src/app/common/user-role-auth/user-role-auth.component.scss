@@ -1,0 +1,27 @@
+@import '../../../sass/variables';
+.user-btn-primary {
+    background-color:blue($color: #000000) !important;
+}
+.chg-btn-verify{
+    background-color:  $digi-crop-bg-color !important; 
+    border: none !important;
+    color: white !important;
+    padding: 10px 16px !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    font-size: 13px !important;
+  }
+
+  .chg-btn-cnc {
+    background-color:  #ff0000  !important; 
+    border: none !important;
+    color: white !important;
+    padding: 10px 16px !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    font-size: 13px !important;
+
+
+  }

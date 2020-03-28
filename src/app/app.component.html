@@ -1,0 +1,14 @@
+
+<div class="wrapper">
+    <div *ngIf="isLogin===true" [ngClass]="{'sidebar':isLogin=== true}" data-color="danger"
+        data-background-color="white" data-image="./assets/img/sidebar-4.jpg">
+        <app-sidebar *ngIf="isLogin===true"></app-sidebar>
+        <div [ngClass]="{'sidebar-background':isLogin=== true}"></div>
+    </div>
+    <div [ngClass]="{'main-panel':isLogin=== true}">
+        <app-header
+            *ngIf="isLogin===true && currentRoute !=='/' && currentRoute !=='/auth'  && currentRoute !=='/signup/sign-up-user'">
+        </app-header>
+        <router-outlet></router-outlet>
+    </div>
+</div>

@@ -1,0 +1,148 @@
+<div [class.overlayDisplay]="loader" class="container-fluid p-0 bg-register">
+    <div class="section " style="margin-bottom: 95px">
+        <div class="row ">
+            <div class=" col-md-12 col-10 col-sm-12   col-lg-12 col-xl-12 ">
+                <app-pre-login-header>
+                </app-pre-login-header>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class=" d-none d-lg-block   col-lg-6">
+                <div class="row mt-5 pt-5">
+                    <div class="col-lg-4"></div>
+                   
+                   
+                </div>
+             </div>
+            <div class="col-md-12 col-sm-12  offset-1-lg col-lg-4  col-xs-12  ml-2 ipad-device-layout mt-5 pt-5 mb-5">
+                <div class="row   mt-5">
+                    
+
+                    <div class="row" *ngIf="signUpState === 1 ">
+                        <form class="contact-bx  margin-header pt-3" autocomplete="off" [formGroup]="userForm"
+                            (ngSubmit)="userRegisteration()"  style="background: white;border-radius: 10px;box-shadow: 6.4px 6.4px 24px 0 rgba(31, 59, 112, 0.26);" >
+                            <div class="col-lg-12 col-md-12 col-sm-12 ">
+                                <div class="row text-center justify-content-center  ">
+    
+                                    <span class="register-heading title-center ">
+                                        Register User </span>
+                                </div>
+                            </div>
+                          
+                            <div class="col-lg-12 col-md-12 col-sm-12 mt-4" style="padding: 0px 50px 0px 50px;"> 
+                                <div class="form-group">
+                                    <div class="input-group">
+
+                                        <input name="name" type="email" placeholder="Email id" 
+                                            autocomplete="off" required=""
+                                            class="form-control custom-input no-border-input" formControlName="email">
+                                        <div *ngIf="(userForm.controls['email']?.errors && userForm?.controls['email']?.touched && !userForm?.controls['email']?.valid) || !isFormValid"
+                                            class="error-msg">
+                                            <div [hidden]="!userForm?.controls['email']?.errors?.required">Email
+                                                is required.</div>
+                                            <div
+                                                [hidden]="!userForm?.controls['email']?.errors?.patternInvalid   || userForm.controls['email']?.errors?.required ">
+                                                Email is invalid . </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 mt-4" style="padding: 0px 50px 0px 50px;"> 
+                                <div class="form-group">
+                                    <div class="input-group">
+
+                                        <input name="fname" type="text" placeholder="Firstname" 
+                                            autocomplete="off" required=""
+                                            class="form-control custom-input no-border-input" formControlName="fname">
+                                        <div *ngIf="(userForm.controls['fname']?.errors && userForm?.controls['fname']?.touched && !userForm?.controls['fname']?.valid) || !isFormValid"
+                                            class="error-msg">
+                                            <div [hidden]="!userForm?.controls['fname']?.errors?.required">
+                                                Firstname is required.</div>
+                                                                                  </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 mt-4" style="padding: 0px 50px 0px 50px;"> 
+                                <div class="form-group">
+                                    <div class="input-group">
+
+                                        <input name="lname" type="text" placeholder="Lastname" 
+                                            autocomplete="off" required=""
+                                            class="form-control custom-input no-border-input" formControlName="lname">
+                                        <div *ngIf="(userForm.controls['lname']?.errors && userForm?.controls['lname']?.touched && !userForm?.controls['lname']?.valid) || !isFormValid"
+                                            class="error-msg">
+                                            <div [hidden]="!userForm?.controls['lname']?.errors?.required">Lastname
+                                                is required.</div>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 " style="padding: 0px 50px 0px 50px;">
+                                <div class="form-group">
+                                    <div class="input-group">
+
+                                        <input name="name" type="password" placeholder="Password" required=""
+                                            autocomplete="off" class="form-control custom-input no-border-input"
+                                            formControlName="password">
+                                        <div *ngIf="(userForm.controls['password']?.errors && userForm?.controls['password']?.touched && !userForm?.controls['password']?.valid) || !isFormValid"
+                                            class="error-msg">
+                                            <div [hidden]="!userForm?.controls['password']?.errors?.required">
+                                                Password is required.</div>
+                                            <div
+                                                [hidden]="!userForm?.controls['password']?.errors?.patternInvalid   || userForm.controls['password']?.errors?.required ">
+                                                Password is invalid. </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 " style="padding: 0px 50px 0px 50px;">
+                                <div class="form-group">
+                                    <div class="input-group">
+
+                                        <input name="name" type="password" placeholder="Confirm password"
+                                            class="form-control custom-input no-border-input"
+                                            formControlName="cpassword" autocomplete="off">
+                                        <div *ngIf="(userForm.controls['cpassword']?.errors && userForm?.controls['cpassword']?.touched && !userForm?.controls['cpassword']?.valid) || !isFormValid"
+                                            class="error-msg">
+                                            <div class="mt-5"
+                                                [hidden]="!userForm?.controls['cpassword']?.errors?.required">
+                                                Confirom password is required.</div>
+                                            <div
+                                                [hidden]="!userForm?.controls['cpassword']?.errors?.patternInvalid   || userForm.controls['cpassword']?.errors?.required ">
+                                                Confirom Password is invalid. </div>
+                                            <div
+                                                *ngIf="(userForm.get('password').value !== userForm.get('cpassword').value) && !userForm.controls['cpassword']?.errors?.required && !userForm?.controls['cpassword']?.errors?.patternInvalid ">
+                                                Both password must be same . </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12  m-b30 mt-5 text-center" style="padding: 0px 50px 0px 50px;" >
+                                <button class="btn-custom-purple "  [disabled]="loader" type='submit'>Register&nbsp; <i
+                                        class="fa fa-long-arrow-right"></i></button>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12  m-b30 mt-3">
+                                <div class="row justify-content-center " *ngIf="signUpState === 1">
+                                    <div class=" "> <span class="custom-text-1" [routerLink]="['/auth']">Already
+                                            Have an account? </span> &nbsp;&nbsp;<a [routerLink]="['/auth']"
+                                            class="custom-text-2">SIGN IN</a> </div>
+                                    
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <app-footer>
+
+    </app-footer>
+</div>
+
+
+
+<app-digi-crop-loader *ngIf="loader"> </app-digi-crop-loader>

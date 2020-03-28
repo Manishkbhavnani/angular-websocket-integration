@@ -1,0 +1,12 @@
+@import '../../../sass/variables';
+@import '../../../sass/mixins'; 
+.btn-custom {
+    @include btn-purple(20px,20px);
+       
+    }
+    
+    
+    .btn-custom-1 {
+        @include btn-orange(20px,20px);
+        
+    }

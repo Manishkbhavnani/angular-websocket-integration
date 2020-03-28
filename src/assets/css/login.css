@@ -1,0 +1,110 @@
+.bg-login {
+    /* background: url(/assets/images/login-bg.png) aliceblue no-repeat url(/assets/images/login-bg-img.png); */
+    background-position: 98% 0%, 101% -125%;
+    background-image: url(assets/images/login-bg.png), url(assets/images/login-bg-img.png);
+    background-color: aliceblue;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.heading-login {
+    font-family: Ubuntu;
+    font-size: 41.5px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.47;
+    letter-spacing: 1.98px;
+    /* text-align: left; */
+    color: #000000;
+}
+
+
+.custom-email-pswd {
+    position: relative;
+    /* width: 66px; */
+    /* height: 19px; */
+    opacity: 0.5;
+    font-family: Ubuntu;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.58;
+    letter-spacing: 0.96px;
+    text-align: left;
+    color: rgba(24, 23, 25, 0.5);
+}
+
+.custom-input {
+    font-family: Ubuntu;
+    font-size: 24px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.58;
+    letter-spacing: normal;
+    text-align: left;
+    color: #181719;
+}
+
+.custom-text-1 {
+    /* width: 263px;
+    height: 19px; */
+    opacity: 0.5;
+    font-family: Ubuntu;
+    font-size: 19px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.58;
+    letter-spacing: normal;
+    text-align: left;
+    color: rgba(24, 23, 25, 0.5);
+}
+
+.custom-text-2 {
+    /* width: 98px;
+    height: 18px; */
+    font-family: Ubuntu;
+    font-size: 21px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.58;
+    letter-spacing: normal;
+    text-align: left;
+    color: #181719;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .bg-login {
+        background-image: none;
+    }
+}
+
+
+/* Portrait tablets and small desktops */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .bg-login {
+        background-image: none;
+    }
+}
+
+
+/* Landscape phones and portrait tablets */
+
+@media (max-width: 767px) {
+    .bg-login {
+        background-image: none;
+    }
+}
+
+
+/* Portrait phones and smaller */
+
+@media (max-width: 480px) {
+    .bg-login {
+        background-image: none;
+    }
+}

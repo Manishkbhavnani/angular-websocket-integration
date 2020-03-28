@@ -1,0 +1,19 @@
+<button type="button" class="close" data-dismiss="dialog" data-ng-
+click="cancel($event)" [mat-dialog-close]="true">
+    <span aria-hidden="true">&times;</span>
+    <span class="sr-only" >Close</span>
+ </button>
+
+
+<h1 mat-dialog-title>User Details </h1>
+<div mat-dialog-content>
+  <p>Please Login/Signup  </p>
+</div>
+
+
+
+<div mat-mat-dialog-actions *ngIf="data?.loginCheck">
+    &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button mat-button  name="login" class="btn btn-primary center-block modify-btn"  [mat-dialog-close]="true" [routerLink]="['auth']">Login</button>
+    &nbsp;
+    <button mat-button  name="signup" class="btn btn-primary center-block modify-btn"   [mat-dialog-close]="true" [routerLink]="['/signup/sign-up-user']" >Signup</button>
+</div>

@@ -1,0 +1,54 @@
+@import './variables';
+@mixin btn-purple($padding,$font-size) {
+    padding: $padding !important ;
+    border-radius: 8px !important;
+    background-color: $digi-crop-bg-color !important;
+    font-family: $digi-crop-font-family !important;
+    font-size: $font-size !important;
+    color: #fff !important;
+    border: 1px solid $digi-crop-bg-color  !important;
+    line-height: 1px !important;
+
+    &:hover {
+        background: #fff !important;
+        color: $digi-crop-bg-color !important;
+        border:
+         1px solid $digi-crop-bg-color  !important;
+    }
+
+    @media (max-width: 480px) {
+        font-size: $font-size - 4px !important;
+        padding: $padding - 2px !important;
+    }
+    @media (max-width: 375px) {
+        font-size: $font-size - 9px !important;
+        padding: $padding - 4px !important;
+    }
+}
+
+@mixin btn-orange($padding,$font-size)  {
+    padding: $padding !important;
+    border-radius: 8px !important;
+    background-color:  $digi-crop-orange !important;
+    font-family: $digi-crop-font-family !important;
+    font-size: $font-size !important;
+    color: #fff !important;
+    border: 1px solid $digi-crop-orange  !important;
+    line-height: 1px !important;
+
+    &:hover {
+        background: #fff !important;
+        color: $digi-crop-orange !important;
+        border: 1px solid $digi-crop-orange  !important;
+    }
+    @media (max-width: 480px) {
+        font-size: $font-size - 4px !important;
+        padding: $padding - 2px !important;
+    }
+    @media (max-width: 375px) {
+        font-size: $font-size - 9px !important;
+        padding: $padding - 4px !important;
+    }
+}
+
+

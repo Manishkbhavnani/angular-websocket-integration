@@ -1,0 +1,655 @@
+/* custom */
+
+.subscribe-box>.btn.hover {
+    color: white;
+}
+
+#subscribe-btn:hover {
+    color: white;
+}
+
+.heading-p-custom {
+    opacity: 0.8;
+    font-family: Ubuntu;
+    font-size: 30px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.27;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+    margin-left: 16px;
+    margin-right: 16px;
+    max-width: 1029px;
+    padding-top: 28px;
+}
+
+.custom-subscribe {
+    top: -75px;
+    position: relative;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0px 9px 45.1px 0.9px rgba(54, 54, 54, 0.4);
+    border: solid 2px #eeeeee;
+}
+
+@media only screen and (max-width: 991px) {
+    .menu-links .nav li {
+        float: none;
+        display: flex;
+        width: 100%;
+        align-items: baseline;
+    }
+}
+
+.copyright-custom {
+    /* width: 600px; */
+    height: 19px;
+    font-family: Ubuntu;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: #ffffff;
+    margin-top: 19px;
+}
+
+.Shape-10 {
+    width: 645px;
+    height: 2px;
+    opacity: 0.2;
+    background-color: #ffffff;
+}
+
+.Know-Us {
+    width: auto;
+    /* height: 19px; */
+    font-family: Ubuntu;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+
+.Rectangle-8 {
+    width: 1923px;
+    height: 820px;
+    background-color: #303446;
+}
+
+.Rectangle-10-copy-2 {
+    width: 244px;
+    height: 8px;
+    opacity: 0.16;
+    background-color: #ffffff;
+    border-radius: 30px 30px 0px 0px;
+}
+
+.Get-in-touch {
+    width: 146px;
+    height: 15px;
+    font-family: Ubuntu;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.35;
+    letter-spacing: 0.8px;
+    text-align: left;
+    color: #ffffff;
+}
+
+.social-manage {
+    margin-left: auto !important;
+    margin: auto;
+}
+
+.curve-blue {
+    border-radius: 5px;
+    background-color: blue;
+    height: 5px;
+    border-top-left-radius: 50px 50px;
+    border-top-right-radius: 50px 50px
+}
+
+.Rectangle-3-copy {
+    width: 370px;
+    height: 6px;
+    background-image: linear-gradient(to left, #345bfb 19%, #6c09fb 96%);
+}
+
+.Rectangle-10-copy {
+    width: auto;
+    height: auto;
+    margin-top: 36px;
+    margin-left: -22px;
+    background-image: linear-gradient(to left, #345bfb 19%, #6c09fb 96%);
+    margin-right: -23px;
+    margin-bottom: -23px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.Lorem-ipsum-footer {
+    /* width: 402px; */
+    /* height: 100px; */
+    opacity: 0.5;
+    font-family: Ubuntu;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    /* text-align: left; */
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.logo-copy {
+    width: 409px;
+    height: 218px;
+    object-fit: contain;
+    box-shadow: 0px 4px 5.8px 0.2px rgba(155, 153, 153, 0.17);
+}
+
+.Rectangle-10 {
+    /* width: 470px; */
+    /* height: 495px; */
+    /* opacity: 0.16; */
+    background: #ffffff16;
+    color: white;
+    text-align: justify;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.footer-bg-custom {
+    background: #303446;
+    border-top-left-radius: 50% 40%;
+    border-top-right-radius: 50% 40%;
+    margin-top: 190px;
+}
+
+.Rectangle-1-copy-4 {
+    width: 159px;
+    height: 66px;
+    border-radius: 8px;
+    border: solid 2px #4264fb;
+    background-color: #ffffff;
+}
+
+.Rectangle-9 {
+    /* width: 1170px;
+    height: 218px; */
+    border-radius: 10px;
+    box-shadow: 0px 9px 45.1px 0.9px rgba(54, 54, 54, 0.4);
+    border: solid 2px #eeeeee;
+    background-color: #f1f5fb;
+}
+
+.Shape-arrow {
+    width: 51px;
+    height: 85px;
+    object-fit: contain;
+    background-color: #ffffff;
+}
+
+.Neque-porro-quisquam-est-quique-porro-dolorem-ipsum {
+    /* width: 399px;
+    height: 48px; */
+    opacity: 1;
+    font-family: Ubuntu;
+    font-size: 17px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: rgba(254, 254, 254, 0.5);
+}
+
+.Tell-us-where-you-are-struggling {
+    /* width: 480px; */
+    /* height: 29px; */
+    font-family: Ubuntu;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fefefe;
+}
+
+.btn-circle.btn-xl {
+    width: 50px;
+    height: 50px;
+    padding: 10px 16px;
+    border-radius: 35px;
+    font-size: 24px;
+    line-height: 1.33;
+    color: #4264fb;
+    font-weight: 500;
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+}
+
+.padding-custom {
+    padding-bottom: 38px;
+    padding-top: 53px;
+}
+
+.pl-17 {
+    padding-left: 17rem;
+}
+
+.Ellipse-4 {
+    width: 45px;
+    height: 45px;
+    background-color: #ffffff;
+}
+
+.custom-cours-bx {
+    overflow: visible;
+    padding-top: 70px;
+    margin-top: -70px;
+    border-radius: 8px;
+    box-shadow: 6.4px 6.4px 24px 0 rgba(31, 59, 112, 0.26);
+}
+
+.blob-shape-4-copy-2 {
+    /* width: 1278px; */
+    /* height: 700px; */
+    /* object-fit: contain; */
+    /* background: url(assets/images/blob-shape-4-copy-2.png) 450px 250px; */
+    /* background-image: linear-gradient(315deg, #345bfb 19%, #6c09fb 96%); */
+    /* background-size: cover; */
+    background: url(assets/images/blob-shape-4-copy-2.png) no-repeat;
+    background-size: 65% 100%;
+    /* margin-right: 760px; */
+    /* background-position: top -500px left -800px; */
+}
+
+
+/*
+    @media (min-width: 601px) {
+        .blob-shape-4-copy-2 {
+            background: url(assets/images/blob-shape-4-copy-2@3x.png) no-repeat;
+            background-size: 65% 100%;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .blob-shape-4-copy-2 {
+            background: url(assets/images/blob-shape-4-copy-2@2x.png) no-repeat;
+            background-size: 65% 100%;
+        }
+    } */
+
+.work-section-custom {
+    width: 1838px;
+    height: 557px;
+}
+
+.Maths-Physics {
+    /* width: 123px; */
+    height: 19px;
+    font-family: Ubuntu;
+    font-size: 17px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 3;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+    /* margin-left: 59px; */
+}
+
+.Lisa-Pravas {
+    /* width: 157px;
+    height: 24px; */
+    font-family: Ubuntu;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: center;
+    color: #181719;
+    margin-bottom: 10px;
+    /* margin-left: 48px; */
+}
+
+.h-custom {
+    width: 80px;
+    height: 28px;
+    /* background-color: #4264fb; */
+    font-family: Ubuntu;
+    font-size: 23px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.14;
+    letter-spacing: normal;
+    text-align: center;
+    color: #4264fb;
+}
+
+.rating-custom {
+    width: 27px;
+    height: 14px;
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.33;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+
+.Rectangle-5 {
+    width: 76px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: #e88635;
+    /* margin-left: 80px; */
+    /* margin-top: 20px; */
+    margin: auto;
+}
+
+.Ellipse-2 {
+    width: 120px;
+    height: 120px;
+    background-color: #000000;
+}
+
+.Group-4 {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.Rectangle-4 {
+    width: 270px;
+    height: 276px;
+}
+
+.Get-Started {
+    /* width: 133px;
+    height: 20px; */
+    font-family: Ubuntu;
+    font-size: 25px;
+    font-weight: 450;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #4264fb;
+}
+
+.Rectangle-1-copy {
+    /* width: 211px;
+    height: 59px;
+    border-radius: 8px;
+    border: solid 1px #4264fb;
+    background-color: white;
+    color: #4264fb; */
+    /* margin-top: -14px;
+        margin-left: 70px; */
+    width: 232px;
+    height: 66px;
+    border-radius: 8px;
+    border: solid 1px #4264fb;
+    background-color: #4264fb;
+    /* color: #4264fb !important; */
+    background: #fff;
+    /* border: 1px solid #4264fb; */
+    /* font-size: 16px; */
+    /* padding: 15px 40px; */
+    /* text-transform: uppercase; */
+    /* font-weight: normal; */
+    font-family: Ubuntu;
+}
+
+.Lorem-ipsum-dolor-sit-amet-consectetur-adi-piscing-ipsum-dolor {
+    font-family: Ubuntu;
+    /* width: 850px;
+    height: 155px; */
+    /* font-family: Ubuntu; */
+    font-size: 40px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+}
+
+.Welcome-to-digi-crop {
+    opacity: 0.5;
+    font-family: Ubuntu;
+    font-size: 34px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.36px;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.Shape-2 {
+    width: 1800px;
+    height: 600px;
+    object-fit: contain;
+    opacity: 0.3;
+    background-color: #daecf9;
+}
+
+.Rectangle-2-custom {
+    /* width: 1923px;
+    height: 793px; */
+    /* background-color: #1469a7; */
+    background: url(assets/images/shape-2.svg) no-repeat;
+    /* background-size: 125% 125%;
+    background-position: top -500px left -800px; */
+    /* background-size: 125% 85%;
+    background-position: top -100px left 0px; */
+    background-size: 125% 155%;
+    background-position: top -395px right -832px;
+}
+
+.nav-custom {
+    width: 470px;
+    height: 22px;
+    opacity: 0.6;
+    font-family: Ubuntu;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    /* color: rgba(0, 0, 0, 0.6); */
+    padding-left: 47px;
+}
+
+.header-transparent>.navbar-expand-lg>.menu-bar>.container>.menu-links>li {
+    color: white
+}
+
+.rectangle-button-custom {
+    width: 190px;
+    height: 56px;
+    border-radius: 8px;
+    background-color: #535453;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 3;
+}
+
+.online-discussion {
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    /* box-shadow: 0px 6px 32px 0 #363636; */
+}
+
+@media only screen and (min-width: 768px) {
+    .online-discussion {
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        /* box-shadow: 0px 6px 32px 0 #363636; */
+    }
+}
+
+.section1-custom {
+    /* position: absolute; */
+    /* margin-top: 130px; */
+    /* background-size: 125% 125%;
+    background-position: top -500px right -800px; */
+}
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    padding-top: 25px;
+    width: 612px;
+    height: 515px;
+}
+
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 90%;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .blob-shape-4-copy-2 {
+        background-size: auto;
+    }
+}
+
+
+/* Portrait tablets and small desktops */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .blob-shape-4-copy-2 {
+        background-size: auto;
+    }
+}
+
+
+/* Landscape phones and portrait tablets */
+
+@media (max-width: 767px) {
+    .blob-shape-4-copy-2 {
+        background-size: auto;
+    }
+}
+
+
+/* Portrait phones and smaller */
+
+@media (max-width: 480px) {
+    .blob-shape-4-copy-2 {
+        background-size: auto;
+    }
+}
+
+.custom-section-1-padding {
+    margin-top: 230px;
+}
+
+@media (max-width: 480px) {
+    .custom-section-1-padding {
+        margin-top: 47px;
+    }
+}
+
+@media (max-width: 767px) {
+    .custom-section-1-padding {
+        margin-top: 47px;
+    }
+}
+
+@media (min-width:1024px) {
+    .heading-p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width:425px) {
+    .videoWrapper {
+        width: auto;
+        height: auto;
+    }
+}
+
+.logo-size {
+    width: 218px;
+    height: 87px;
+}
+
+@media (max-width:768px) {
+    .logo-size {
+        width: auto;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-size {
+        width: auto;
+        height: auto;
+    }
+}
+
+
+/* .header {
+    background-color: #4b0852;
+}
+ */
+
+
+/* For mobile phones: */
+
+
+/* @media only screen and (min-width: 768px) {
+    .header {
+        background-color: #e88635;
+    }
+    .blob-shape-4-copy-2 {
+        background: url(assets/images/blob-shape-4-copy-2@3x.png) no-repeat;
+        background-size: 65% 100%;
+    }
+} */

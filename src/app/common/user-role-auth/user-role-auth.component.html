@@ -1,0 +1,19 @@
+<h1 mat-dialog-title> {{dialogData?.title}}</h1>
+<div mat-dialog-content>
+    <p> {{dialogData?.content}}</p>
+    <form [formGroup]="userRoleSignUp">
+
+
+        <mat-form-field>
+            <input matInput type="password" formControlName="password" placeholder="Current Password">
+            <mat-error *ngIf="userRoleSignUp.get('password').hasError('required')">
+               Password is required
+            </mat-error>
+        </mat-form-field>
+
+    </form>
+</div>
+<mat-dialog-actions align="end">
+    <button mat-dialog-close class="chg-btn-cnc">Cancel</button>&nbsp;
+    <button (click)="verify()" class="chg-btn-verify">Verify</button>
+</mat-dialog-actions>

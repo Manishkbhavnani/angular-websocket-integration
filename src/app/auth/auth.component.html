@@ -1,0 +1,63 @@
+
+  <div [class.overlayDisplay]="loader"  class="container img-bg" style="margin-bottom: 80px">
+
+      <div class="row ">
+          <div class=" col-md-12 col-10 col-sm-12  col-lg-12 col-xl-12 ">
+              <app-pre-login-header>
+              </app-pre-login-header>
+          </div>
+      </div>
+      <div class="row content-center p-5 mt-5">
+          <div class="col-md-12 col-lg-4  col-xs-12 col-sm-12 ipad-device-layout pl-lg-5" style="background: white;
+          border-radius: 10px;
+          box-shadow: 6.4px 6.4px 24px 10px rgba(31, 59, 112, 0.26);
+          margin-top: 110px;">
+
+
+              <div class="row  ">
+               <div class="col-lg-12 col-md-12 col-sm-12 ">
+                  <div class="text-left heading-login mt-4">Login  </div>
+                </div>
+
+                </div>
+          
+                  <div class="row  content-center  placeani">
+                  <form class="contact-bx margin-header margin-form-header mt-3"  autocomplete="off"  [formGroup]="authform" (ngSubmit)="authUser()" >
+                          <div class="col-lg-10 col-md-12 col-sm-12 ">
+                              <div class="form-group">
+                                  <div class="input-group">
+                                      <input name="name" type="email"   autocomplete="off"  placeholder="Email" required="" class="form-control custom-input no-border-input"  autocomplete="off" formControlName="email">
+
+
+                                      <div *ngIf="(authform.controls['email']?.errors && authform.controls['email']?.touched && !authform.controls['email']?.valid) || !isFormValid" class="error-msg">
+                                        <div [hidden]="!authform.controls['email'].errors?.required">Email is required.</div>
+                                        <div [hidden]="!authform.controls['email'].errors?.patternInvalid || authform.controls['email']?.errors?.required">Email is invalid.</div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-lg-10 col-md-12 col-sm-12 ">
+                              <div class="form-group">
+                                  <div class="input-group">
+
+                                      <input name="name" type="password"  autocomplete="off" placeholder="Password" required="" class="form-control custom-input no-border-input" formControlName="password" autocomplete="off" >
+                                      <div *ngIf="(authform.controls['password']?.errors && authform?.controls['password']?.touched && !authform?.controls['password']?.valid) || !isFormValid" class="error-msg">
+                                        <div [hidden]="!authform?.controls['password']?.errors?.required">Password is required.</div>
+                                      </div>
+                                    </div>
+                              </div>
+                          </div>
+                          <div class="col-lg-12 col-md-12 col-sm-12 mb-1 mt-3">
+                              <button class="btn-custom-purple" [disabled]="loader" >Login&nbsp; <i class="fa fa-long-arrow-right"  ></i></button>
+                          </div>
+
+                        </form>
+                    </div>
+       
+              </div>
+
+                   <div class="col-md-12  col-lg-6 col-xs-12 col-sm-12 device-layout" ></div>
+
+      </div>
+  </div>
+  <app-digi-crop-loader  *ngIf="loader"> </app-digi-crop-loader>

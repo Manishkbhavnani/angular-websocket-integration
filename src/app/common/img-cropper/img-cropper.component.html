@@ -1,0 +1,15 @@
+<!-- <ng-template let-modal> -->
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Crop {{data?.title}} Image</h4>
+      <button type="button" class="close" aria-label="Close" (click)="close(false)">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <img-cropper #cropper [image]="localData" [settings]="cropperSettings"></img-cropper>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary modify-btn " (click)="close(localData)">Crop</button>
+      &nbsp;<button type="button" class="btn btn-outline-primary modify-btn " (click)="close(false)">Cancel</button>
+    </div>
+  <!-- </ng-template> -->
